@@ -33,15 +33,13 @@ public class B {
     public static boolean canPartition(int[] a) {
 
         ArrayList<Integer> originalArray = new ArrayList<>();
-        for (int num : a) {
+        for (int num : a)
             originalArray.add(num);
-        }
         for (int currentElement = 0; currentElement < originalArray.size(); currentElement++) {
             ArrayList<Integer> remainder = new ArrayList<>(originalArray);
             Integer product = remainder.remove(currentElement);
-            if (product.equals(productOf(remainder))) {
+            if (product.equals(productOf(remainder)))
                 return true;
-            }
         }
         return false;
     }
@@ -49,9 +47,8 @@ public class B {
     // Helper function to calculate product of array remainder
     public static int productOf(ArrayList<Integer> remainder) {
         int product = 1;
-        for (int element : remainder) {
+        for (int element : remainder)
             product *= element;
-        }
         return product;
     }
 
