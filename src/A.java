@@ -67,18 +67,15 @@ public class A {
         for (int i = 0; i < a.length; i++) {
             String element = Integer.toString(a[i]);
             String[] digits = new String[element.length()];
-            for (int j = 0; j < digits.length; j++) {
+            for (int j = 0; j < digits.length; j++)
                 digits[j] = String.valueOf(element.charAt(j));
-            }
-            if ("asc".equalsIgnoreCase(order)) {
+            if ("asc".equalsIgnoreCase(order))
                 Arrays.sort(digits);
-            } else if ("desc".equalsIgnoreCase(order)) {
+            else if ("desc".equalsIgnoreCase(order))
                 Arrays.sort(digits, Collections.reverseOrder());
-            }
             StringBuilder newElement = new StringBuilder();
-            for (String d : digits) {
+            for (String d : digits)
                 newElement.append(d);
-            }
             resultArray[i] = Integer.parseInt(newElement.toString());
         }
         return resultArray;
