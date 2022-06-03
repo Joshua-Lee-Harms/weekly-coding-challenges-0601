@@ -32,6 +32,8 @@ public class B {
 
     public static boolean canPartition(int[] a) {
 
+        if ( a.length == 1)
+            return false;
         ArrayList<Integer> originalArray = new ArrayList<>();
         for (int num : a)
             originalArray.add(num);
